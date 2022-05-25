@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #1e1f21,
+    #312947,
+    #662459,
+    #9f0048,
+    #c01313
+  );
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ------------NAVBAR-------------- */
+.navbar {
+  background-color: var(--myLightBlue);
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.brand {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  padding: 0.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.preview-link {
+  text-decoration: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.preview-link:hover,
+.brand:hover {
+  background-color: white;
+  color: black;
+}
+
+/* -------------Landing-header--------------- */
+.landing-container {
+  padding: 5%;
+}
+
+.header-container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.shoe-img {
+  width: 40%;
+}
+
+.slogan {
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.sub-slogan {
+  font-size: 1.2rem;
+}
+
+.bottom-container {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.jordan-img {
+  width: 40%;
+}
+
+.jordan-slogan {
+  width: 60%;
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+}
+
+/* -----------FOOTER----------------- */
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 2%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --------------SHOP------------------- */
+.card-container {
+  margin: 6% 0 15% 0;
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  justify-content: space-evenly;
+  grid-row-gap: 4%;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card {
+  background-color: whitesmoke;
+  padding: 4%;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-shoe-img {
+  width: 80%;
+  transition: 0.3s;
+}
+
+.card-shoe-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+  padding: 2% 20%;
+  outline: none;
+  align-items: center;
+}
+
+.btn-container > i,
+p {
+  margin: 5% 10%;
+}
+
+.add-btn,
+.less-btn {
+  cursor: pointer;
+}
+
+.add-btn,
+.less-btn,
+.qty {
+  font-size: 1.3rem;
+}
+
+.card-price {
+  font-size: 1.1rem;
+}
+
+/* ------------CART------------------- */
+.cart-container {
+  font-size: large;
+  font-weight: bold;
+  margin: 6% 0 10% 0;
+  display: grid;
+  grid-template-columns: repeat(1, 700px);
+  justify-content: space-around;
+  justify-items: center;
+  grid-row-gap: 4%;
+}
+
+.cart-card {
+  color: black;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1em;
+}
+
+.cart-shoe-img {
+  width: 15%;
+}
+
+.cart-delete {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 0.7em;
+  color: black;
+}
+
+.cart-delete:hover {
+  color: white;
+  background-color: rgba(29, 29, 29, 0.938);
+}
+
+.checkout-container {
+  color: white;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.checkout-btn {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.2em 0.5em;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: rgba(29, 29, 29, 0.938);
 }
