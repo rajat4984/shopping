@@ -13,6 +13,17 @@ function App() {
   const [cardIdArray, setCardIdArray] = useState([]);
   const [checkOutPrice, setCheckOutPrice] = useState(0);
 
+  const setIdAndCardList = (cardId) => {
+    const newCartList = cartCardList.filter((cartCard) => {
+      return cartCard.id !== cardId;
+    });
+    const newCardIdArray = cardIdArray.filter((itemId) => {
+      return itemId !== cardId;
+    });
+    setCartCardList(newCartList);
+    setCardIdArray(newCardIdArray);
+  };
+
   const increseCartCardList = (cardId) => {
     const shoe = shoes[cardId - 1];
     if (!cardIdArray.includes(cardId)) {
@@ -25,12 +36,15 @@ function App() {
   const decreaseCartCardList = (cardId, cardQty) => {
     const shoe = shoes[cardId - 1];
     if (cardQty === 1) {
-      const newCartList = cartCardList.filter((cartCard) => {
-        return cartCard.id !== cardId;
-      });
-      setCartCardList(newCartList);
+      setIdAndCardList(cardId);
     }
     setCheckOutPrice((prevPrice) => prevPrice - shoe.price);
+  };
+
+  const removeShoeCart = (cardId, cardPrice, cardQty) => {
+    setIdAndCardList(cardId);
+    shoes[cardId - 1].qty = 0;
+    setCheckOutPrice((prevPrice) => prevPrice - cardPrice * cardQty);
   };
 
   return (
@@ -51,7 +65,11 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Cart cartCardList={cartCardList} checkOutPrice={checkOutPrice} />
+            <Cart
+              cartCardList={cartCardList}
+              checkOutPrice={checkOutPrice}
+              removeShoeCart={removeShoeCart}
+            />
           }
         ></Route>
       </Routes>

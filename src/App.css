@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-image: linear-gradient(
     to right bottom,
@@ -206,13 +205,7 @@ p {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
-  padding: 0.7em;
   color: black;
-}
-
-.cart-delete:hover {
-  color: white;
-  background-color: rgba(29, 29, 29, 0.938);
 }
 
 .checkout-container {
@@ -237,4 +230,17 @@ p {
   color: white;
   border: 1px solid white;
   background-color: rgba(29, 29, 29, 0.938);
+}
+
+/* ---------------------NO-SHOES-------------- */
+
+.no-shoes-heading {
+  color: white;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.sad-icon{
+  position: absolute;
+  bottom: 10%;
 }

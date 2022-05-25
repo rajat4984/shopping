@@ -21,7 +21,7 @@ function Card({
   };
 
   const decreaseQty = () => {
-    decreaseCartCardList(id,cardQty);
+    decreaseCartCardList(id, cardQty);
     if (cardQty > 0) {
       shoes[id - 1].qty = cardQty - 1;
     }
