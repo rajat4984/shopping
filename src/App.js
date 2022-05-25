@@ -9,19 +9,27 @@ import shoes from "./components/shoes.json";
 import { useState } from "react";
 
 function App() {
-  const [cartCardList, setCartCardList] = useState(() => new Set());
+  const [cartCardList, setCartCardList] = useState([]);
+  const [cardIdArray, setCardIdArray] = useState([]);
   const [checkOutPrice, setCheckOutPrice] = useState(0);
 
   const increseCartCardList = (cardId) => {
     const shoe = shoes[cardId - 1];
-    setCartCardList(cartCardList.add(shoe));
+    if (!cardIdArray.includes(cardId)) {
+      setCartCardList([...cartCardList, shoe]);
+      setCardIdArray([...cardIdArray, cardId]);
+    }
     setCheckOutPrice((prevPrice) => prevPrice + shoe.price);
   };
 
-  const decreaseCartCardList = (cardId) => {
-    console.log(cartCardList)
+  const decreaseCartCardList = (cardId, cardQty) => {
     const shoe = shoes[cardId - 1];
-    setCartCardList(cartCardList.delete(shoe));
+    if (cardQty === 1) {
+      const newCartList = cartCardList.filter((cartCard) => {
+        return cartCard.id !== cardId;
+      });
+      setCartCardList(newCartList);
+    }
     setCheckOutPrice((prevPrice) => prevPrice - shoe.price);
   };
 

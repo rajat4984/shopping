@@ -3,7 +3,15 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import shoes from "./shoes.json";
 
-function Card({ id, price, img, shoeName, qty, increseCartCardList,decreaseCartCardList }) {
+function Card({
+  id,
+  price,
+  img,
+  shoeName,
+  qty,
+  increseCartCardList,
+  decreaseCartCardList,
+}) {
   const [cardQty, setQty] = useState(qty);
 
   const increaseQty = () => {
@@ -13,9 +21,12 @@ function Card({ id, price, img, shoeName, qty, increseCartCardList,decreaseCartC
   };
 
   const decreaseQty = () => {
-    decreaseCartCardList(id)
-    shoes[id - 1].qty = cardQty - 1;
-    cardQty > 0 ? setQty((prevQty) => prevQty - 1) : setQty(0);
+    decreaseCartCardList(id,cardQty);
+    if (cardQty > 0) {
+      shoes[id - 1].qty = cardQty - 1;
+    }
+
+    cardQty > 0 && setQty((prevQty) => prevQty - 1);
   };
 
   return (
