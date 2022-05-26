@@ -7,9 +7,11 @@ function Navbar({ brand }) {
   return (
     <nav>
       <div className="navbar">
-        <Link to="/" className="brand">
-          {brand}
-        </Link>
+        <div>
+          <Link to="/" className="brand">
+            {brand}
+          </Link>
+        </div>
         <div className="preview">
           <Link to="shop" className="preview-link">
             <BsShop />
