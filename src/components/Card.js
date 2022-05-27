@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
-import shoes from "./shoes.json";
+import shoes from "./shoes";
 
 function Card({
   id,
@@ -31,7 +31,7 @@ function Card({
 
   return (
     <div className="card">
-      <img src={img} className="card-shoe-img"></img>
+      <img src={process.env.PUBLIC_URL + img} className="card-shoe-img"></img>
       <p className="shoe-name">{shoeName}</p>
       <div className="info-container">
         <div className="btn-container">

@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
-import shoes from "./components/shoes.json";
+import shoes from "./components/shoes";
 import { useState } from "react";
 
 function App() {
