@@ -31,7 +31,7 @@ function Card({
 
   return (
     <div className="card">
-      <img src={process.env.PUBLIC_URL + img} className="card-shoe-img"></img>
+      <img src={process.env.PUBLIC_URL + "/" + img} className="card-shoe-img"></img>
       <p className="shoe-name">{shoeName}</p>
       <div className="info-container">
         <div className="btn-container">

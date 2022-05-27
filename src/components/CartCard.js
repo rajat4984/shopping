@@ -5,7 +5,7 @@ function CartCard({ price, img, shoeName, qty, removeShoeCart, id }) {
   return (
     <div className="cart-card">
       <img
-        src={process.env.PUBLIC_URL + img}
+        src={process.env.PUBLIC_URL + "/" + img}
         className="cart-shoe-img"
         alt={shoeName}
       ></img>
