@@ -1,7 +1,7 @@
 import "./App.css";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
@@ -72,6 +72,10 @@ function App() {
             />
           }
         ></Route>
+        <Route
+        path="*"
+        element={<Navigate to="/" replace />}
+    />
       </Routes>
       <Footer />
     </div>
