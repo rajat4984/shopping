@@ -121,30 +121,28 @@ footer {
   padding: 2%;
   font-size: 1.2rem;
   text-align: center;
-  /* position: sticky; */
-  /* top: 100%; */
 }
 
 /* --------------SHOP------------------- */
-.card-container {
-  margin: 6% 0 15% 0;
+
+.shoe-card-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 200px));
   justify-content: space-evenly;
-  grid-gap: 4%;
+  margin: 8% 0;
   color: black;
   text-align: center;
   font-weight: bold;
   padding: 0 5em;
-  /* min-height: 100vh; */
 }
 
 .card {
   background-color: whitesmoke;
-  padding: 4%;
+  padding: 3%;
   border-radius: 5px;
   transition: 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 2em;
 }
 
 .card-shoe-img {
@@ -188,17 +186,18 @@ p {
 
 /* ------------CART------------------- */
 .cart-container {
-  font-size: large;
+  font-size: medium;
   font-weight: bold;
-  margin: 6% 0 10% 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px));
-  justify-content: space-around;
-  justify-items: center;
-  grid-gap: 7%;
-  padding: 4em 5em;
   margin: 2em 0;
   min-height: 100vh;
+}
+
+.cart-card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px));
+  justify-items: center;
+  justify-content: center;
+  margin: 2em;
 }
 
 .cart-card {
@@ -211,7 +210,7 @@ p {
   transition: 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0.5em 0;
-  margin: .5em 0;
+  margin: 1em 0;
 }
 
 .cart-shoe-img {
@@ -231,8 +230,9 @@ p {
 
 .checkout-container {
   color: white;
-  align-items: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -319,10 +319,8 @@ p {
     justify-content: center;
   }
 
-  .card-container {
-    font-size: 1.3rem;
-    margin: 12%;
-    grid-row-gap: 1.5%;
+  .shoe-card-container{
+    margin: 15% 0;
   }
 
   .card {
@@ -366,8 +364,6 @@ p {
     font-size: 1rem;
     padding: 0 6%;
     align-items: flex-end;
-    grid-row-gap: 0%;
-    height: 50vh;
   }
 
   .cart-shoe-img {
@@ -378,5 +374,11 @@ p {
 
   .no-shoes-heading {
     font-size: 2rem;
+  }
+
+
+  /* ----------------FOOTER---------------- */
+  footer{
+    font-size: 1rem;
   }
 }
