@@ -197,7 +197,7 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(150px));
   justify-items: center;
   justify-content: center;
-  margin: 2em;
+  margin: 2em .5em;
 }
 
 .cart-card {
@@ -366,6 +366,10 @@ p {
     align-items: flex-end;
   }
 
+  .cart-card-container{
+    margin-top: 6em;
+  }
+
   .cart-shoe-img {
     width: 16%;
   }
@@ -380,5 +384,6 @@ p {
   /* ----------------FOOTER---------------- */
   footer{
     font-size: 1rem;
+    padding: 4%;
   }
 }
