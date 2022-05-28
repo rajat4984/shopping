@@ -13,6 +13,7 @@ function App() {
   const [cardIdArray, setCardIdArray] = useState([]);
   const [checkOutPrice, setCheckOutPrice] = useState(0);
 
+  //utility function
   const setIdAndCardList = (cardId) => {
     const newCartList = cartCardList.filter((cartCard) => {
       return cartCard.id !== cardId;
@@ -24,6 +25,7 @@ function App() {
     setCardIdArray(newCardIdArray);
   };
 
+  //increases cartCard information
   const increseCartCardList = (cardId) => {
     const shoe = shoes[cardId - 1];
     if (!cardIdArray.includes(cardId)) {
@@ -33,6 +35,7 @@ function App() {
     setCheckOutPrice((prevPrice) => prevPrice + shoe.price);
   };
 
+  //decreases cartCard information
   const decreaseCartCardList = (cardId, cardQty) => {
     const shoe = shoes[cardId - 1];
     if (cardQty === 1) {
@@ -41,6 +44,7 @@ function App() {
     setCheckOutPrice((prevPrice) => prevPrice - shoe.price);
   };
 
+  //remove from cart list
   const removeShoeCart = (cardId, cardPrice, cardQty) => {
     setIdAndCardList(cardId);
     shoes[cardId - 1].qty = 0;
@@ -72,10 +76,7 @@ function App() {
             />
           }
         ></Route>
-        <Route
-        path="*"
-        element={<Navigate to="/" replace />}
-    />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </div>
