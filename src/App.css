@@ -125,7 +125,7 @@ footer {
 
 /* --------------SHOP------------------- */
 
-.shoe-card-container{
+.shoe-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 200px));
   justify-content: space-evenly;
@@ -192,12 +192,12 @@ p {
   min-height: 100vh;
 }
 
-.cart-card-container{
+.cart-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px));
   justify-items: center;
   justify-content: center;
-  margin: 2em .5em;
+  margin: 2em 0.5em;
 }
 
 .cart-card {
@@ -319,7 +319,7 @@ p {
     justify-content: center;
   }
 
-  .shoe-card-container{
+  .shoe-card-container {
     margin: 15% 0;
   }
 
@@ -366,8 +366,12 @@ p {
     align-items: flex-end;
   }
 
-  .cart-card-container{
+  .cart-card-container {
     margin-top: 6em;
+  }
+
+  .cart-card {
+    margin: 0.7em 0;
   }
 
   .cart-shoe-img {
@@ -380,9 +384,8 @@ p {
     font-size: 2rem;
   }
 
-
   /* ----------------FOOTER---------------- */
-  footer{
+  footer {
     font-size: 1rem;
     padding: 4%;
   }
