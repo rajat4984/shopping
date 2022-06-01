@@ -22,7 +22,7 @@ const shoes = [
     },
     {
       id: 4,
-      shoeName: "Air MAX 1",
+      shoeName: "Air jordan 11",
       price: 250,
       img: "shoes/shoe4.jpg",
       qty: 0,
@@ -43,14 +43,14 @@ const shoes = [
     },
     {
       id: 7,
-      shoeName: "Air  fly 1",
+      shoeName: "Air vintage 2",
       price: 500,
       img: "shoes/shoe7.jpg",
       qty: 0,
     },
     {
       id: 8,
-      shoeName: "Air MAX 21",
+      shoeName: "Air vintage 3",
       price: 900,
       img: "shoes/shoe8.jpg",
       qty: 0,
